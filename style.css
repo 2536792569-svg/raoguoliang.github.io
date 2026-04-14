@@ -1,0 +1,247 @@
+/* 全局样式重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Microsoft YaHei", sans-serif;
+}
+
+/* 页面整体样式 */
+body {
+    background-color: #e8dff5;
+    color: #4a148c;
+    line-height: 1.8;
+    scroll-behavior: smooth;
+}
+
+/* 头部导航栏样式 */
+.header {
+    background-color: #d1c4e9;
+    padding: 0.8rem 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 99;
+}
+
+/* 导航菜单布局 */
+.nav-bar {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+
+/* 导航按钮样式 */
+.nav-item {
+    text-decoration: none;
+    color: #4a148c;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 8px 8px 0 0;
+    transition: all 0.3s ease;
+}
+
+/* 导航高亮/hover效果 */
+.nav-item:hover, .nav-item.active {
+    background-color: #f3e5f5;
+    color: #9c27b0;
+}
+
+/* 主体内容容器样式 */
+.main-content, .page-content {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+    background-color: #f3e5f5;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* 板块小标题样式 */
+.section-title {
+    font-size: 1.5rem;
+    color: #9c27b0;
+    border-bottom: 2px solid #4a148c;
+    padding-bottom: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+/* 页面大标题样式 */
+.page-title {
+    font-size: 2rem;
+    color: #9c27b0;
+    text-align: center;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid #4a148c;
+    padding-bottom: 1rem;
+}
+
+/* 个人简介布局 */
+.intro-container {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* 头像样式 +  hover动效 */
+.avatar-box .avatar {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #d1c4e9;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+.avatar-box .avatar:hover {
+    transform: scale(1.05);
+}
+
+/* 个人信息文字样式 */
+.info-box p {
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+    color: #4a148c;
+}
+
+/* 照片墙网格布局 */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+/* 照片卡片悬浮动效 */
+.gallery-item {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+.gallery-item:hover {
+    transform: translateY(-8px);
+}
+
+/* 照片图片样式 */
+.gallery-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+/* 歌手/影视 卡片布局 */
+.singer-box, .movie-box {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+}
+
+/* 歌手/影视 单个卡片 */
+.singer-item, .movie-item {
+    text-align: center;
+    width: 300px;
+}
+
+/* 歌手/影视 图片样式 */
+.singer-img, .movie-img {
+    width: 250px;
+    height: 250px;
+    border-radius: 12px;
+    object-fit: cover;
+    border: 4px solid #d1c4e9;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+.singer-img:hover, .movie-img:hover {
+    transform: scale(1.05);
+}
+
+/* 歌手/影视 文字样式 */
+.singer-item h3, .movie-item h3 {
+    color: #9c27b0;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+.singer-item p, .movie-item p {
+    font-size: 1rem;
+    color: #4a148c;
+    margin-bottom: 1rem;
+}
+
+/* 联系方式表单布局 */
+.message-form {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.form-group {
+    margin-bottom: 1.5rem;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #4a148c;
+    font-size: 1.1rem;
+}
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #d1c4e9;
+    border-radius: 8px;
+    font-size: 1rem;
+    resize: none;
+}
+
+/* 提交按钮样式 */
+.submit-btn {
+    padding: 0.8rem 2rem;
+    background-color: #ba68c8;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+.submit-btn:hover {
+    background-color: #9c27b0;
+}
+
+/* 获奖/寄语 列表样式 */
+.message-list {
+    margin-top: 3rem;
+}
+.message-item {
+    background-color: #e8dff5;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.message-item h4 {
+    color: #9c27b0;
+    margin-bottom: 0.5rem;
+}
+.message-item span {
+    font-size: 0.9rem;
+    color: #7b1fa2;
+}
+
+/* 底部版权样式 */
+.footer {
+    background-color: #d1c4e9;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 3rem;
+    color: #4a148c;
+    font-size: 0.9rem;
+}
